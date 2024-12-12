@@ -4255,7 +4255,7 @@ MonoBehaviour:
   sword1: {fileID: 2111073719}
   bow1: {fileID: 1373421844}
   arrowCount: 0
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 2513248988431842709, guid: 3bdfb26cf17fbbb469992eda10634045, type: 3}
   weaponInUse: 0
   hurting: 0
   playerSprite: {fileID: 1450656028}
@@ -108252,7 +108252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1373421845
 Transform:
   m_ObjectHideFlags: 0
