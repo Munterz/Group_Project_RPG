@@ -4066,6 +4066,7 @@ GameObject:
   - component: {fileID: 587962354}
   - component: {fileID: 587962353}
   - component: {fileID: 587962357}
+  - component: {fileID: 587962358}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -4234,6 +4235,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &587962358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587962352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f884bcb4483e0154d8f823e1bf02acd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  rb2d: {fileID: 587962354}
+  playerAnim: {fileID: 587962357}
+  direction: 0
+  attackingCoolDown: 0
+  sword1: {fileID: 2111073719}
+  bow1: {fileID: 1373421844}
+  arrowCount: 0
+  arrowPrefab: {fileID: 0}
+  weaponInUse: 0
+  hurting: 0
+  playerSprite: {fileID: 1450656028}
+  stillInEnemyRange: 0
+  playerHealth: 3
+  gameOver: {fileID: 0}
+  heart1: {fileID: 1193002904}
+  heart2: {fileID: 452979859}
+  heart3: {fileID: 1208764076}
+  inGameCoinText: {fileID: 977210559}
+  coinCount: 0
+  inGameHealthPotionText: {fileID: 556481852}
+  healthPotionCount: 0
+  inGameArrowText: {fileID: 531700676}
+  shopButtons: {fileID: 1119725637}
 --- !u!1 &624302194
 GameObject:
   m_ObjectHideFlags: 0
