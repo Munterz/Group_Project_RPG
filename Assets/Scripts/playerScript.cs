@@ -141,7 +141,7 @@ public class playerScript : MonoBehaviour
                 }
 
                 //shooting arrows
-                if (/*arrowCount > 0 && */weaponInUse == 1)
+                if (arrowCount > 0 && weaponInUse == 1)
                 {
                     PlayerPrefs.SetInt("ArrowCount", arrowCount - 1);
                     if (direction == 0)
