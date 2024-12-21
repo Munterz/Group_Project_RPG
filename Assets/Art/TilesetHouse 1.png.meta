@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af7e11d2d5f3e9e429de5f641032f340
+guid: 0e5652ff8cc2c1c469aa11ea4e86cc49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -94,23 +94,10 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -123,200 +110,389 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime_0
+      name: TilesetHouse 1_0
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb11e9fa0885f1b40b851fb486a638ef
+      internalID: 875820206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_1
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 240
+        width: 45
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f2d15edd529ca4183f5a006edec8a6
+      internalID: -77031247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 321
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8fcf669c4465441849ff26db887307
+      internalID: -258634352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_3
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 320
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2b45a4df224094b991e2a2eaebf649
+      internalID: -298735722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_4
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 320
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74cfa4aca77dbb45b919ad77fec73ab
+      internalID: 430385062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd18809d80de36742bde0bf8b9174e1c
+      internalID: 589845400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec6da0ef5fb8904ca76989267543bef
+      internalID: 985299865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 63
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a6b69f61e22444a8b72734a639ce66
+      internalID: 25846374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91dac27d2afe6c4080db5b603e36da3
+      internalID: -1178640398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetHouse 1_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 16
-        height: 16
+        y: 320
+        width: 64
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f06c97776f4dad640a2392c1505fed76
-      internalID: -1365925800
+      spriteID: 01a388c227e8da0439ac93602f154eb2
+      internalID: -1976109337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_1
+      name: TilesetHouse 1_10
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 182
+        y: 288
+        width: 4
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7853afd077ae96f49b8ca25f26475c3f
-      internalID: 1482929699
+      spriteID: 9b675e41e91fddb4e8d485f27c2b976e
+      internalID: -459112646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_2
+      name: TilesetHouse 1_11
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
+        x: 160
+        y: 272
+        width: 15
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cc96bf9d1566d14784f5e7747d01a33
-      internalID: -1123038754
+      spriteID: 389639ba748e9c047a83e78ac1e6a4dc
+      internalID: 390188039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_3
+      name: TilesetHouse 1_12
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
+        x: 198
+        y: 272
         width: 16
-        height: 16
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 579f7c36bf93c7c4a8dd635e4dbdc9eb
-      internalID: -1130165956
+      spriteID: f1af3ec5d8aa0c143bb7c9b33ffb7fec
+      internalID: 1036810562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_4
+      name: TilesetHouse 1_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 160
+        y: 244
+        width: 9
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a494735e4d21584f81d8cbe4c933b2b
-      internalID: -2078087562
+      spriteID: 5f63936e42c8b0f46875ad90e9b24a82
+      internalID: 1800151797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_5
+      name: TilesetHouse 1_14
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 176
+        y: 244
+        width: 22
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5bfa7a3e269ca4e95d64c9240ea50b
-      internalID: 164705894
+      spriteID: 0cb4a0bb7a8a2694abe06b83d0999403
+      internalID: -303777920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_6
+      name: TilesetHouse 1_15
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
+        x: 182
+        y: 256
+        width: 4
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9afd7301689c1e843a20fd4467c79666
-      internalID: 425034546
+      spriteID: c06762e001c29274cab372740c05727d
+      internalID: 1949828656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_7
+      name: TilesetHouse 1_16
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
+        x: 514
+        y: 64
+        width: 13
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dcd03f612cac414596c66c0571a747a
-      internalID: 1001345018
+      spriteID: a6c776f74fc6d2941b9ef1f3afbbc13e
+      internalID: -1761781223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_8
+      name: TilesetHouse 1_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
+        x: 498
+        y: 64
+        width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1e002e1397181419d4a30f5b0d9e89
-      internalID: 90166127
+      spriteID: 841191b5f8b27eb4f9b8db592394d558
+      internalID: -1359846234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_9
+      name: TilesetHouse 1_18
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 288
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -326,18 +502,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743eda0fab321da4c974ace73d59f5eb
-      internalID: -1090351570
+      spriteID: 7f144941868cfa8489e43c306d1dadde
+      internalID: 519505605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_10
+      name: TilesetHouse 1_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
+        x: 272
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -347,18 +523,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e2ac550cb8d114192e8e663756f934
-      internalID: 1468094189
+      spriteID: 7b8a6057bd105a747bb4ed09a95bd323
+      internalID: 1730138401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_11
+      name: TilesetHouse 1_20
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 256
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -368,92 +544,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a16495b23c267384bb7b3d0c62d2f2ea
-      internalID: -964872184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 414c974e354b152419331337b37fe279
-      internalID: 1405890569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_13
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e1f684bafe4ce84893d2b93306e01ad
-      internalID: -191044671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_14
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 134f85afbdb439a4bab769a9db1c73c2
-      internalID: 1403444668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df7b58e11e018394fa8f588163e3d350
-      internalID: 38761789
+      spriteID: 3348267d69d971748b6833208274209b
+      internalID: 1923909529
       vertices: []
       indices: 
       edges: []
@@ -469,22 +561,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slime_0: -1365925800
-      Slime_1: 1482929699
-      Slime_10: 1468094189
-      Slime_11: -964872184
-      Slime_12: 1405890569
-      Slime_13: -191044671
-      Slime_14: 1403444668
-      Slime_15: 38761789
-      Slime_2: -1123038754
-      Slime_3: -1130165956
-      Slime_4: -2078087562
-      Slime_5: 164705894
-      Slime_6: 425034546
-      Slime_7: 1001345018
-      Slime_8: 90166127
-      Slime_9: -1090351570
+      TilesetHouse 1_0: 875820206
+      TilesetHouse 1_1: -77031247
+      TilesetHouse 1_10: -459112646
+      TilesetHouse 1_11: 390188039
+      TilesetHouse 1_12: 1036810562
+      TilesetHouse 1_13: 1800151797
+      TilesetHouse 1_14: -303777920
+      TilesetHouse 1_15: 1949828656
+      TilesetHouse 1_16: -1761781223
+      TilesetHouse 1_17: -1359846234
+      TilesetHouse 1_18: 519505605
+      TilesetHouse 1_19: 1730138401
+      TilesetHouse 1_2: -258634352
+      TilesetHouse 1_20: 1923909529
+      TilesetHouse 1_3: -298735722
+      TilesetHouse 1_4: 430385062
+      TilesetHouse 1_5: 589845400
+      TilesetHouse 1_6: 985299865
+      TilesetHouse 1_7: 25846374
+      TilesetHouse 1_8: -1178640398
+      TilesetHouse 1_9: -1976109337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
