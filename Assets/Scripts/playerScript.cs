@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class playerScript : MonoBehaviour
+public class playerScript : MonoBehaviour, IDataPersistence
 {
     private Vector2 moveInput;
     public float moveSpeed;
@@ -47,7 +47,16 @@ public class playerScript : MonoBehaviour
         playerHealth = 3;
     }
 
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
     
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
+
     void Update()
     {
         //attacking cool down if
