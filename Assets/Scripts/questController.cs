@@ -12,6 +12,7 @@ public class questController : MonoBehaviour {
     public GameObject fruitUi;
     public GameObject keyUi;
 
+
     // Start is called before the first frame update
     void Start() {
 
@@ -19,42 +20,44 @@ public class questController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (PlayerPrefs.GetInt("collectedFruit") == 1) {
-            fruitUi.SetActive(true);
-            keyUi.SetActive(false);
-            unlockedDoor.SetActive(false);
-            fruitObeject.SetActive(false);
-        }
+        //if (PlayerPrefs.GetInt("collectedFruit") == 1) {
+        //    fruitUi.SetActive(true);
+        //    keyUi.SetActive(false);
+        //    unlockedDoor.SetActive(false);
+        //    fruitObeject.SetActive(false);
+        //}
 
-        if (PlayerPrefs.GetInt("keyValue") == 1) {
-            fruitUi.SetActive(false);
-            keyUi.SetActive(true);
-            unlockedDoor.SetActive(true);
-            fruitObeject.SetActive(false);
-        }
+        //if (PlayerPrefs.GetInt("keyValue") == 1) {
+        //    fruitUi.SetActive(false);
+        //    keyUi.SetActive(true);
+        //    unlockedDoor.SetActive(true);
+        //    fruitObeject.SetActive(false);
+        //}
     }
 
     public void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
-            if (PlayerPrefs.GetInt("keyValue") == 0) {
-                if (PlayerPrefs.GetInt("questAccepted") == 0) {
-                    questConvo.SetActive(true);
-                    inQuestConvo.SetActive(false);
-                    iHaveTheFruit.SetActive(false);
-                }
-                if (PlayerPrefs.GetInt("questAccepted") == 1) {
-                    if (PlayerPrefs.GetInt("collectedFruit") == 1) {
-                        iHaveTheFruit.SetActive(true);
-                        questConvo.SetActive(false);
-                        inQuestConvo.SetActive(false);
-                    } else {
-                        questConvo.SetActive(false);
-                        inQuestConvo.SetActive(true);
-                        iHaveTheFruit.SetActive(false);
-                    }
 
-                }
+        if (collision.gameObject.CompareTag("Player")) {
+
+            // This means quest is already complete. You don't need to do anything in this case. Hence return!
+            if (PlayerPrefs.GetInt("keyValue") != 0) return;
+
+            if( PlayerPrefs.GetInt("collectedFruit") != 1)
+            {
+                // Quest#1 has not been completed yet and fruit has not been fetched
+                questConvo.SetActive(true);
             }
+            else
+            {
+                // Fruit has been fetched
+                iHaveTheFruit.SetActive(true);
+
+                fruitUi.SetActive(false);
+                keyUi.SetActive(true);
+
+                PlayerPrefs.SetInt("keyValue", 1);
+            }
+
         }
     }
 
