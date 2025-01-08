@@ -18,24 +18,43 @@ public class slimeScript : MonoBehaviour {
     [SerializeField]
     private GameObject takeDamageVFX;
 
-    // Start is called before the first frame update
-    void Start() {
+    
+    [SerializeField]
+    private float activePlayerPositionThreshold;
+    [SerializeField]
+    private Transform defaultPosition;
 
-    }
+    private Transform currentTarget;
 
     // Update is called once per frame
     void Update() {
-        if (Vector2.Distance(Player.transform.position, this.transform.position) < interactRange || seenPlayer == true) {
-            seenPlayer = true;
-            if (health > 0) {
-                moving = true;
-                transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
-            }
-            if (health <= 0) {
-                Instantiate(droppedItem, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                gameObject.SetActive(false);
-            }
+        //if (Vector2.Distance(Player.transform.position, this.transform.position) < interactRange || seenPlayer == true) {
+        //    seenPlayer = true;
+        //    if (health > 0) {
+        //        moving = true;
+        //        transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
+        //    }
+        //    if (health <= 0)
+        //    {
+        //        Instantiate(droppedItem, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        //        gameObject.SetActive(false);
+        //    }
+        //}
+        
+
+        if (Vector2.Distance(Player.transform.position, this.transform.position) < interactRange)
+        {
+            currentTarget = Player.transform;
+            //seenPlayer = true;
         }
+        if(Player.transform.position.x < activePlayerPositionThreshold)
+        {
+            currentTarget = defaultPosition;
+        }
+
+        if (currentTarget == null) return;
+
+        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -50,6 +69,11 @@ public class slimeScript : MonoBehaviour {
             if (health > 0) {
                 transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, -100 * Time.deltaTime);
             }
+            else
+            {
+                Instantiate(droppedItem, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                gameObject.SetActive(false);
+            }
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(whitecolor());
         }
@@ -63,6 +87,11 @@ public class slimeScript : MonoBehaviour {
 
             if (health > 0) {
                 transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, -100 * Time.deltaTime);
+            }
+            else
+            {
+                Instantiate(droppedItem, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                gameObject.SetActive(false);
             }
             //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(whitecolor());
