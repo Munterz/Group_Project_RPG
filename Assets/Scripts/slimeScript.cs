@@ -15,6 +15,9 @@ public class slimeScript : MonoBehaviour {
 
     public GameObject droppedItem;
 
+    [SerializeField]
+    private GameObject takeDamageVFX;
+
     // Start is called before the first frame update
     void Start() {
 
@@ -38,6 +41,11 @@ public class slimeScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Sword1")) {
             seenPlayer = true;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
             health--;
             if (health > 0) {
                 transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, -100 * Time.deltaTime);
@@ -48,10 +56,15 @@ public class slimeScript : MonoBehaviour {
         if (collision.gameObject.CompareTag("Arrow1")) {
             seenPlayer = true;
             health--;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
             if (health > 0) {
                 transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, -100 * Time.deltaTime);
             }
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(whitecolor());
         }
     }

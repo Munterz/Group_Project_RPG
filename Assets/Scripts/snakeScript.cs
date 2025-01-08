@@ -9,6 +9,9 @@ public class snakeScript : MonoBehaviour {
     private Vector2 movementDirection;
     private Vector2 movementPerSecond;
 
+    [SerializeField]
+    private GameObject takeDamageVFX;
+
     public int health;
     public GameObject droppedItem;
 
@@ -49,13 +52,23 @@ public class snakeScript : MonoBehaviour {
         if (collision.gameObject.CompareTag("Sword1")) {
             health--;
             calculateNewMovementVector();
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(whitecolor());
         }
         if (collision.gameObject.CompareTag("Arrow1")) {
             health--;
             calculateNewMovementVector();
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(whitecolor());
         }
     }

@@ -9,6 +9,9 @@ public class mushroomScript : MonoBehaviour {
     public int health;
     public GameObject droppedItem;
 
+    [SerializeField]
+    private GameObject takeDamageVFX;
+
     // Start is called before the first frame update
     void Start() {
         attackingCoolDown = timeBetweenAttack;
@@ -39,7 +42,12 @@ public class mushroomScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Sword1")) {
             health--;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             attackingObjects.SetActive(true);
             StartCoroutine(attack());
             attackingCoolDown = timeBetweenAttack;
@@ -47,7 +55,12 @@ public class mushroomScript : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("Arrow1")) {
             health--;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             attackingObjects.SetActive(true);
             StartCoroutine(attack());
             attackingCoolDown = timeBetweenAttack;

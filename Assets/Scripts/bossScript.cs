@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bossScript : MonoBehaviour {
+
+    [SerializeField]
+    private GameObject takeDamageVFX, deathVFX;
+
     public GameObject flameBall;
     public GameObject target1;
     public GameObject target2;
@@ -21,6 +25,9 @@ public class bossScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (health <= 0) {
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
             blockingWall.SetActive(false);
             gameObject.SetActive(false);
         }
@@ -40,7 +47,12 @@ public class bossScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Sword1")) {
             health--;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+            GameObject vfx = Instantiate(takeDamageVFX);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
+            //gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             StartCoroutine(WhiteColor());
         }
 

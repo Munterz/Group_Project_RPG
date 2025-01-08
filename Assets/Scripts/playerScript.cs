@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UIElements;
 
-public class playerScript : MonoBehaviour, IDataPersistence
+public class playerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip swordSFX;
+    [SerializeField] private GameObject takeDamageVFX;
     private Vector2 moveInput;
     public float moveSpeed;
     public Rigidbody2D rb2d;
@@ -50,12 +52,12 @@ public class playerScript : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.transform.position = data.playerPosition;
+        //this.transform.position = data.playerPosition;
     }
     
     public void SaveData(ref GameData data)
     {
-        data.playerPosition = this.transform.position;
+        //data.playerPosition = this.transform.position;
     }
 
     void Update()
@@ -231,7 +233,7 @@ public class playerScript : MonoBehaviour, IDataPersistence
             heart1.SetActive(false);
             heart2.SetActive(false);
             heart3.SetActive(false);
-            gameOver.Play("gameOverAnim");
+            gameOver.Play("gameOverAnimation");
             gameObject.GetComponent<Animator>().speed = 0;
         }
 
@@ -252,7 +254,11 @@ public class playerScript : MonoBehaviour, IDataPersistence
     {
         if (collision.gameObject.CompareTag("Enemy") && hurting == false && playerHealth > 0)
         {
-            playerSprite.GetComponent<SpriteRenderer>().color = Color.red;
+            //playerSprite.GetComponent<SpriteRenderer>().color = Color.red;
+            GameObject vfx = Instantiate(takeDamageVFX, transform);
+            vfx.transform.position = transform.position;
+            Destroy(vfx, 2);
+
             playerHealth--;
             StartCoroutine(whitecolor());
             if (playerHealth > 0)
