@@ -8,6 +8,10 @@ using UnityEngine.UIElements;
 public class playerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip swordSFX;
+    [SerializeField] private AudioClip destroySFX;
+    [SerializeField] private AudioClip collisionSFX;
+    [SerializeField] private AudioClip gameOverSFX;
+    [SerializeField] private AudioClip walkSFX;
     [SerializeField] private GameObject takeDamageVFX;
     private Vector2 moveInput;
     public float moveSpeed;
@@ -235,6 +239,7 @@ public class playerScript : MonoBehaviour
             heart3.SetActive(false);
             gameOver.Play("gameOverAnimation");
             gameObject.GetComponent<Animator>().speed = 0;
+            SoundManager.Instance.PlaySFX(gameOverSFX);
         }
 
         coinCount = PlayerPrefs.GetInt("ScoreCount");
@@ -252,6 +257,7 @@ public class playerScript : MonoBehaviour
     //enemy contanct / hurting
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        SoundManager.Instance.PlaySFX(collisionSFX);
         if (collision.gameObject.CompareTag("Enemy") && hurting == false && playerHealth > 0)
         {
             //playerSprite.GetComponent<SpriteRenderer>().color = Color.red;
@@ -276,6 +282,7 @@ public class playerScript : MonoBehaviour
         {
             playerHealth++;
             Destroy(collision.gameObject);
+            SoundManager.Instance.PlaySFX(destroySFX);
         }
         if (collision.gameObject.CompareTag("Coin"))
         {
