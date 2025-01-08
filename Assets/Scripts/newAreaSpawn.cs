@@ -11,6 +11,8 @@ public class newAreaSpawn : MonoBehaviour {
     public Animator sceneChangeAnim;
 
     [SerializeField]
+    private GameObject doorObj;
+    [SerializeField]
     private int doorPassKey;
 
     // Start is called before the first frame update
@@ -24,7 +26,13 @@ public class newAreaSpawn : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player") && PlayerPrefs.GetInt("keyValue") >= doorPassKey) {
+
+            if(doorObj != null)
+            {
+                doorObj.SetActive(false);
+            }
+
             sceneChangeAnim.Play("SwitchScene");
             mainCamera.transform.position = spawnPoint.transform.position + new Vector3(0, 0, -10);
             other.transform.position = spawnPoint.transform.position;
