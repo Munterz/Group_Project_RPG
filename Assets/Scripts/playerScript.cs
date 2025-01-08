@@ -6,6 +6,7 @@ using TMPro;
 
 public class playerScript : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private AudioClip swordSFX;
     private Vector2 moveInput;
     public float moveSpeed;
     public Rigidbody2D rb2d;
@@ -128,6 +129,7 @@ public class playerScript : MonoBehaviour, IDataPersistence
             //attacking
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                SoundManager.Instance.PlaySFX(swordSFX);
                 if (direction == 0)
                 {
                     playerAnim.Play("playerAttackD");
