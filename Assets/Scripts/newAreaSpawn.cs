@@ -10,6 +10,9 @@ public class newAreaSpawn : MonoBehaviour {
 
     public Animator sceneChangeAnim;
 
+    [SerializeField]
+    private int doorPassKey;
+
     // Start is called before the first frame update
     void Start() {
 

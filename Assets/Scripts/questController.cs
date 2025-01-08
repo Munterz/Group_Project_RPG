@@ -10,7 +10,7 @@ public class questController : MonoBehaviour {
     public GameObject unlockedDoor;
 
     public GameObject fruitUi;
-    public GameObject keyUi;
+    public KeyUI keyUi;
 
 
     // Start is called before the first frame update
@@ -53,9 +53,10 @@ public class questController : MonoBehaviour {
                 iHaveTheFruit.SetActive(true);
 
                 fruitUi.SetActive(false);
-                keyUi.SetActive(true);
 
                 PlayerPrefs.SetInt("keyValue", 1);
+                keyUi.gameObject.SetActive(true);
+                keyUi.SetValue();
             }
 
         }
